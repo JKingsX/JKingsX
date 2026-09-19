@@ -1,0 +1,10 @@
+# daily automation (heatmap) — these are the only ones GitHub Actions installs
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# portrait pipeline — runs locally only, when you change your photo
+pillow
+numpy
+
+# optional, heavyweight: uncomment for background removal on a real photo
+# rembg

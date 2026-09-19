@@ -1,0 +1,26 @@
+{
+  "username": "JKingsX",
+  "prompt": "jkings@github ~ $",
+  "portrait": {
+    "source": "assets/source-photo.png",
+    "prepped": "assets/source-prepped.png",
+    "crop": [95, 0, 300, 265],
+    "upscale": 4,
+    "clahe_clip": 1.6,
+    "blur": 2.6,
+    "vignette": { "cx": 0.5, "cy": 0.46, "rx": 0.42, "ry": 0.56, "start": 0.66, "soft": 0.55 },
+    "cols": 110,
+    "char_aspect": 0.5,
+    "gamma": 0.85,
+    "ramp": " .:*+vuw#W@",
+    "ink": "#e6edf3",
+    "background": "#0d1117",
+    "cursor": "#39d353"
+  },
+  "heatmap": {
+    "palette": ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"],
+    "background": "#0d1117",
+    "text": "#8b949e",
+    "accent": "#c9d1d9"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_comment": "Edit freely - this file is the only input to info-card.svg. Re-run: python scripts/make_info_card.py",
+  "user": "jkings",
+  "host": "github",
+  "tagline": "Seeking wisdom. Building things.",
+  "rows": [
+    { "key": "Now",      "value": "Founder / Growth @ BrainJuice" },
+    { "key": "Prev",     "value": "Performance marketing, DTC ops" },
+    { "key": "Focus",    "value": "AI agents, marketing automation" },
+    { "key": "Stack",    "value": "Python - TypeScript - Node - SQL" },
+    { "key": "Tools",    "value": "Claude Code - ffmpeg - Meta Ads API" },
+    { "key": "Data",     "value": "BigQuery - GA4 - Shopify - Yampi" },
+    { "key": "Editor",   "value": "VS Code - PowerShell - Git" },
+    { "key": "Location", "value": "Brazil / UTC-3" }
+  ],
+  "highlights": [
+    "Ships marketing pipelines that run themselves",
+    "Turns DRE spreadsheets into decisions",
+    "Builds the tool before doing the task twice"
+  ]
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="600" viewBox="0 0 700 600" role="img" aria-label="neofetch-style info card">
+  <title>jkings@github</title>
+  <style>
+    text { font-family: 'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace; font-size: 17px; fill: #c9d1d9; }
+    .k { fill: #39d353; }
+    .v { fill: #c9d1d9; }
+    .dim { fill: #8b949e; }
+    .acc { fill: #58a6ff; font-weight: 600; }
+    .big { font-size: 21px; font-weight: 700; }
+    .ttl { fill: #8b949e; font-size: 13px; }
+    @keyframes ln { from { opacity: 0; transform: translateY(6px); }
+                    to   { opacity: 1; transform: translateY(0); } }
+    .ln { opacity: 0; animation: ln 0.45s ease-out forwards; }
+  
+  </style>
+  <rect width="700" height="600" rx="10" fill="#0d1117" stroke="#21262d"/>
+  <path d="M0 10a10 10 0 0 1 10-10h680a10 10 0 0 1 10 10v24H0z" fill="#161b22"/>
+  <line x1="0" y1="34" x2="700" y2="34" stroke="#21262d"/>
+  <circle cx="28" cy="17.0" r="5" fill="#f85149"/><circle cx="46" cy="17.0" r="5" fill="#d29922"/><circle cx="64" cy="17.0" r="5" fill="#39d353"/>
+  <text x="350.0" y="21.5" text-anchor="middle" class="ttl">neofetch</text>
+  <text class="k big ln" style="animation-delay:0.00s" x="28" y="68">jkings@github</text>
+  <text class="dim ln" style="animation-delay:0.07s" x="28" y="88">-------------</text>
+  <text class="ln" style="animation-delay:0.14s" x="28" y="122" xml:space="preserve"><tspan class="k">Now       </tspan><tspan class="v">Founder / Growth @ BrainJuice</tspan></text>
+  <text class="ln" style="animation-delay:0.21s" x="28" y="152" xml:space="preserve"><tspan class="k">Prev      </tspan><tspan class="v">Performance marketing, DTC ops</tspan></text>
+  <text class="ln" style="animation-delay:0.28s" x="28" y="182" xml:space="preserve"><tspan class="k">Focus     </tspan><tspan class="v">AI agents, marketing automation</tspan></text>
+  <text class="ln" style="animation-delay:0.35s" x="28" y="212" xml:space="preserve"><tspan class="k">Stack     </tspan><tspan class="v">Python - TypeScript - Node - SQL</tspan></text>
+  <text class="ln" style="animation-delay:0.42s" x="28" y="242" xml:space="preserve"><tspan class="k">Tools     </tspan><tspan class="v">Claude Code - ffmpeg - Meta Ads API</tspan></text>
+  <text class="ln" style="animation-delay:0.49s" x="28" y="272" xml:space="preserve"><tspan class="k">Data      </tspan><tspan class="v">BigQuery - GA4 - Shopify - Yampi</tspan></text>
+  <text class="ln" style="animation-delay:0.56s" x="28" y="302" xml:space="preserve"><tspan class="k">Editor    </tspan><tspan class="v">VS Code - PowerShell - Git</tspan></text>
+  <text class="ln" style="animation-delay:0.63s" x="28" y="332" xml:space="preserve"><tspan class="k">Location  </tspan><tspan class="v">Brazil / UTC-3</tspan></text>
+  <text class="acc ln" style="animation-delay:0.70s" x="28" y="372">Highlights</text>
+  <text class="ln" style="animation-delay:0.77s" x="28" y="398" xml:space="preserve"><tspan class="k">  * </tspan><tspan class="v">Ships marketing pipelines that run themselves</tspan></text>
+  <text class="ln" style="animation-delay:0.84s" x="28" y="426" xml:space="preserve"><tspan class="k">  * </tspan><tspan class="v">Turns DRE spreadsheets into decisions</tspan></text>
+  <text class="ln" style="animation-delay:0.91s" x="28" y="454" xml:space="preserve"><tspan class="k">  * </tspan><tspan class="v">Builds the tool before doing the task twice</tspan></text>
+  <text class="dim ln" style="animation-delay:0.98s" x="28" y="488">Seeking wisdom. Building things.</text>
+  <rect class="ln" style="animation-delay:1.05s" x="28" y="556" width="22" height="14" rx="2" fill="#161b22"/>
+  <rect class="ln" style="animation-delay:1.12s" x="54" y="556" width="22" height="14" rx="2" fill="#f85149"/>
+  <rect class="ln" style="animation-delay:1.19s" x="80" y="556" width="22" height="14" rx="2" fill="#39d353"/>
+  <rect class="ln" style="animation-delay:1.26s" x="106" y="556" width="22" height="14" rx="2" fill="#d29922"/>
+  <rect class="ln" style="animation-delay:1.33s" x="132" y="556" width="22" height="14" rx="2" fill="#58a6ff"/>
+  <rect class="ln" style="animation-delay:1.40s" x="158" y="556" width="22" height="14" rx="2" fill="#bc8cff"/>
+  <rect class="ln" style="animation-delay:1.47s" x="184" y="556" width="22" height="14" rx="2" fill="#39c5cf"/>
+  <rect class="ln" style="animation-delay:1.54s" x="210" y="556" width="22" height="14" rx="2" fill="#c9d1d9"/>
+</svg>
