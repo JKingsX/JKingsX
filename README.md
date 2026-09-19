@@ -2,7 +2,7 @@
 
 <h3><code>jkings@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Contribution heatmap, refreshed daily" />
+<img src="./contrib-heatmap.svg?v=2" width="860" alt="Contribution heatmap, refreshed daily" />
 
 <br><br>
 
@@ -10,8 +10,8 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="./ascii-portrait.svg" width="390" alt="ASCII portrait" /></td>
-    <td valign="top"><img src="./info-card.svg" width="470" alt="neofetch-style info card" /></td>
+    <td valign="top"><img src="./ascii-portrait.svg?v=2" width="390" alt="ASCII portrait" /></td>
+    <td valign="top"><img src="./info-card.svg?v=2" width="470" alt="neofetch-style info card" /></td>
   </tr>
 </table>
 

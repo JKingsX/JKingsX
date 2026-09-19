@@ -64,3 +64,16 @@ Trigger it once by hand from the **Actions** tab to confirm it commits.
 - Keep the widths aligned: heatmap `860` = portrait `390` + card `470`.
 
 Based on [Avi Vashishta's write-up](https://www.avivashishta.com/blog/build-animated-github-profile-readme).
+
+## When a change does not show up on the profile
+
+The `?v=N` query on each image in `README.md` exists only to break caches —
+browsers and GitHub's image layer will happily serve an old SVG for hours
+after a push. Bump the number when you change the art and the old frame is
+stuck. The URL changes, so nothing cached matches.
+
+To check what GitHub is actually serving, bypass the page entirely:
+
+```
+curl -sL https://github.com/USERNAME/USERNAME/raw/main/info-card.svg | head
+```
