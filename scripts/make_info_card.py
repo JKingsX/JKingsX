@@ -10,12 +10,14 @@ the panel looks like it is printing next to the portrait.
 
 import json
 import os
+import re
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "info-card.svg"
 
-W, H = 700, 660
+W = 700
+H_MIN = 420
 PAD = 28
 BAR_H = 34
 MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
@@ -74,13 +76,17 @@ def main():
         return (f'class="{(names + " ln").strip()}" '
                 f'style="animation-delay:{i * STAGGER:.2f}s"')
 
-    # Fit the rows to the panel instead of overflowing it: the card has to keep
-    # its 700x600 box so it lines up with the portrait column in the README.
-    strip_y = H - PAD - 16
+    # The panel grows to its content rather than the content squeezing into a
+    # fixed box, so editing profile.json never leaves a hole or an overflow.
+    # main() prints the README widths that keep this aspect matched to the
+    # portrait column.
     skill_lines = wrap(p.get("skills", []))
+    line_h = LINE_H
     lines = (2 + len(p["rows"]) + (2 if skill_lines else 0) + len(skill_lines)
              + 1 + len(p["highlights"]) + 1)
-    line_h = max(20.0, min(LINE_H, (strip_y - 18 - (BAR_H + PAD + 26)) / lines))
+    height = max(H_MIN, BAR_H + PAD + 26 + lines * line_h + 18 + 16 + PAD)
+    height = round(height)
+    strip_y = height - PAD - 16
 
     body = []
     y = BAR_H + PAD + 6
@@ -149,7 +155,7 @@ def main():
     .ln { opacity: 0; animation: ln %.2fs ease-out forwards; }
   """ % RISE
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="neofetch-style info card">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" viewBox="0 0 {W} {height}" role="img" aria-label="neofetch-style info card">
   <title>{esc(user_host)}</title>
   <style>
     text {{ font-family: {MONO}; font-size: 17px; fill: {VAL}; }}
@@ -160,7 +166,7 @@ def main():
     .big {{ font-size: 21px; font-weight: 700; }}
     .ttl {{ fill: {DIM}; font-size: 13px; }}{keyframes}
   </style>
-  <rect width="{W}" height="{H}" rx="10" fill="{BG}" stroke="{BORDER}"/>
+  <rect width="{W}" height="{height}" rx="10" fill="{BG}" stroke="{BORDER}"/>
   <path d="M0 10a10 10 0 0 1 10-10h{W - 20}a10 10 0 0 1 10 10v{BAR_H - 10}H0z" fill="{BAR}"/>
   <line x1="0" y1="{BAR_H}" x2="{W}" y2="{BAR_H}" stroke="{BORDER}"/>
   {dots}
@@ -169,7 +175,17 @@ def main():
 </svg>
 """
     OUT.write_text(svg, encoding="utf-8")
-    print(f"wrote {OUT.name}  {W}x{H}px{', static' if static else ''}")
+    portrait = ROOT / "ascii-portrait.svg"
+    note = ""
+    if portrait.exists():
+        m = re.search(r'width="([\d.]+)" height="([\d.]+)"', portrait.read_text(encoding="utf-8"))
+        if m:
+            # Solve for the two README widths that render both columns at the
+            # same height and still add up to the heatmap's 860.
+            pa, ca = float(m.group(1)) / float(m.group(2)), W / height
+            pw = 860 * pa / (ca + pa)
+            note = f"  -> README widths: portrait {pw:.0f}, card {860 - pw:.0f}"
+    print(f"wrote {OUT.name}  {W}x{height}px{', static' if static else ''}{note}")
 
 
 if __name__ == "__main__":

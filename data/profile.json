@@ -17,20 +17,24 @@
       "value": "Unfair Advantage"
     },
     {
-      "key": "Stack",
-      "value": "Python - TypeScript - Node - SQL"
-    },
-    {
-      "key": "Tools",
-      "value": "Claude Code - ffmpeg - Meta Ads API"
+      "key": "Growth",
+      "value": "Paid traffic - Funnel optimization"
     },
     {
       "key": "Data",
-      "value": "BigQuery - GA4 - Shopify - Yampi"
+      "value": "Data analysis"
     },
     {
-      "key": "Editor",
-      "value": "VS Code - PowerShell - Git"
+      "key": "Systems",
+      "value": "Systems engineering - Infrastructure"
+    },
+    {
+      "key": "Ops",
+      "value": "Process automation - IT"
+    },
+    {
+      "key": "Design",
+      "value": "Web design"
     },
     {
       "key": "Edu",
@@ -41,19 +45,9 @@
       "value": "Florianopolis, SC - Brazil (UTC-3)"
     }
   ],
-  "skills": [
-    "Paid traffic",
-    "Funnel optimization",
-    "Data analysis",
-    "Process automation",
-    "Systems engineering",
-    "Web design",
-    "Infrastructure",
-    "Information technology"
-  ],
   "highlights": [
-    "Ships growth infrastructure, not one-off experiments",
-    "Turns funnel data into decisions that move revenue",
-    "Builds the tool before doing the task twice"
+    "Owns the funnel end to end: traffic in, conversion out",
+    "Builds the infrastructure the growth work runs on",
+    "Automates the process before scaling the team"
   ]
 }
