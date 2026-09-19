@@ -15,7 +15,7 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "info-card.svg"
 
-W, H = 700, 600
+W, H = 700, 660
 PAD = 28
 BAR_H = 34
 MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
@@ -37,6 +37,21 @@ RISE = 0.45
 
 def esc(text):
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def wrap(items, width=54, sep=" - "):
+    """Pack items onto as few lines as fit within `width` characters."""
+    lines, cur = [], ""
+    for item in items:
+        candidate = f"{cur}{sep}{item}" if cur else item
+        if len(candidate) > width and cur:
+            lines.append(cur)
+            cur = item
+        else:
+            cur = candidate
+    if cur:
+        lines.append(cur)
+    return lines
 
 
 def main():
@@ -62,7 +77,9 @@ def main():
     # Fit the rows to the panel instead of overflowing it: the card has to keep
     # its 700x600 box so it lines up with the portrait column in the README.
     strip_y = H - PAD - 16
-    lines = 2 + len(p["rows"]) + 1 + len(p["highlights"]) + 1
+    skill_lines = wrap(p.get("skills", []))
+    lines = (2 + len(p["rows"]) + (2 if skill_lines else 0) + len(skill_lines)
+             + 1 + len(p["highlights"]) + 1)
     line_h = max(20.0, min(LINE_H, (strip_y - 18 - (BAR_H + PAD + 26)) / lines))
 
     body = []
@@ -84,6 +101,18 @@ def main():
             f'<tspan class="v">{esc(row["value"])}</tspan></text>'
         )
         y += line_h
+
+    if skill_lines:
+        y += 10
+        body.append(f'<text {anim("acc")} x="{PAD}" y="{y:.1f}">Skills</text>')
+        y += line_h - 4
+        for line in skill_lines:
+            body.append(
+                f'<text {anim()} x="{PAD}" y="{y:.1f}" xml:space="preserve">'
+                f'<tspan class="k">  # </tspan>'
+                f'<tspan class="v">{esc(line)}</tspan></text>'
+            )
+            y += line_h - 2
 
     y += 10
     body.append(f'<text {anim("acc")} x="{PAD}" y="{y:.1f}">Highlights</text>')

@@ -10,8 +10,8 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="./ascii-portrait.svg" width="370" alt="ASCII portrait" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="neofetch-style info card" /></td>
+    <td valign="top"><img src="./ascii-portrait.svg" width="390" alt="ASCII portrait" /></td>
+    <td valign="top"><img src="./info-card.svg" width="470" alt="neofetch-style info card" /></td>
   </tr>
 </table>
 

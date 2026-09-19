@@ -6,9 +6,9 @@ GitHub strips `<script>` and inline `style` from READMEs but does render SVG
 and runs its SMIL / CSS-keyframe animations.
 
 ```
-ascii-portrait.svg   self-typing monochrome ASCII portrait   370px
-info-card.svg        neofetch-style panel                    490px
-contrib-heatmap.svg  real contribution calendar              860px  (= 370 + 490)
+ascii-portrait.svg   self-typing monochrome ASCII portrait   390px
+info-card.svg        neofetch-style panel                    470px
+contrib-heatmap.svg  real contribution calendar              860px  (= 390 + 470)
 ```
 
 ## Install
@@ -61,6 +61,6 @@ Trigger it once by hand from the **Actions** tab to confirm it commits.
 - Inline `style` is stripped. The only vertical spacing that survives is `<br>`.
 - `<h1>` and `<h2>` draw a full-width underline rule — use `<h3>` for titles.
 - Side-by-side images need a `<table>`; nothing else is reliable.
-- Keep the widths aligned: heatmap `860` = portrait `370` + card `490`.
+- Keep the widths aligned: heatmap `860` = portrait `390` + card `470`.
 
 Based on [Avi Vashishta's write-up](https://www.avivashishta.com/blog/build-animated-github-profile-readme).

@@ -4,16 +4,52 @@
   "host": "github",
   "tagline": "Seeking wisdom. Building things.",
   "rows": [
-    { "key": "Name",     "value": "Joao (JKings) Reis" },
-    { "key": "Now",      "value": "Head of CRO & Infrastructure" },
-    { "key": "Company",  "value": "Unfair Advantage" },
-    { "key": "Focus",    "value": "Conversion rate optimization, infra" },
-    { "key": "Stack",    "value": "Python - TypeScript - Node - SQL" },
-    { "key": "Tools",    "value": "Claude Code - ffmpeg - Meta Ads API" },
-    { "key": "Data",     "value": "BigQuery - GA4 - Shopify - Yampi" },
-    { "key": "Editor",   "value": "VS Code - PowerShell - Git" },
-    { "key": "Edu",      "value": "Universidade do Sul de Santa Catarina" },
-    { "key": "Location", "value": "Florianopolis, SC - Brazil (UTC-3)" }
+    {
+      "key": "Name",
+      "value": "Joao (JKings) Reis"
+    },
+    {
+      "key": "Now",
+      "value": "Head of CRO & Infrastructure"
+    },
+    {
+      "key": "Company",
+      "value": "Unfair Advantage"
+    },
+    {
+      "key": "Stack",
+      "value": "Python - TypeScript - Node - SQL"
+    },
+    {
+      "key": "Tools",
+      "value": "Claude Code - ffmpeg - Meta Ads API"
+    },
+    {
+      "key": "Data",
+      "value": "BigQuery - GA4 - Shopify - Yampi"
+    },
+    {
+      "key": "Editor",
+      "value": "VS Code - PowerShell - Git"
+    },
+    {
+      "key": "Edu",
+      "value": "Universidade do Sul de Santa Catarina"
+    },
+    {
+      "key": "Location",
+      "value": "Florianopolis, SC - Brazil (UTC-3)"
+    }
+  ],
+  "skills": [
+    "Paid traffic",
+    "Funnel optimization",
+    "Data analysis",
+    "Process automation",
+    "Systems engineering",
+    "Web design",
+    "Infrastructure",
+    "Information technology"
   ],
   "highlights": [
     "Ships growth infrastructure, not one-off experiments",
