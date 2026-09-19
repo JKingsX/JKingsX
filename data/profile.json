@@ -4,18 +4,20 @@
   "host": "github",
   "tagline": "Seeking wisdom. Building things.",
   "rows": [
-    { "key": "Now",      "value": "Founder / Growth @ BrainJuice" },
-    { "key": "Prev",     "value": "Performance marketing, DTC ops" },
-    { "key": "Focus",    "value": "AI agents, marketing automation" },
+    { "key": "Name",     "value": "Joao (JKings) Reis" },
+    { "key": "Now",      "value": "Head of CRO & Infrastructure" },
+    { "key": "Company",  "value": "Unfair Advantage" },
+    { "key": "Focus",    "value": "Conversion rate optimization, infra" },
     { "key": "Stack",    "value": "Python - TypeScript - Node - SQL" },
     { "key": "Tools",    "value": "Claude Code - ffmpeg - Meta Ads API" },
     { "key": "Data",     "value": "BigQuery - GA4 - Shopify - Yampi" },
     { "key": "Editor",   "value": "VS Code - PowerShell - Git" },
-    { "key": "Location", "value": "Brazil / UTC-3" }
+    { "key": "Edu",      "value": "Universidade do Sul de Santa Catarina" },
+    { "key": "Location", "value": "Florianopolis, SC - Brazil (UTC-3)" }
   ],
   "highlights": [
-    "Ships marketing pipelines that run themselves",
-    "Turns DRE spreadsheets into decisions",
+    "Ships growth infrastructure, not one-off experiments",
+    "Turns funnel data into decisions that move revenue",
     "Builds the tool before doing the task twice"
   ]
 }

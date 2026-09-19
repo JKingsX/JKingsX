@@ -59,44 +59,49 @@ def main():
         return (f'class="{(names + " ln").strip()}" '
                 f'style="animation-delay:{i * STAGGER:.2f}s"')
 
+    # Fit the rows to the panel instead of overflowing it: the card has to keep
+    # its 700x600 box so it lines up with the portrait column in the README.
+    strip_y = H - PAD - 16
+    lines = 2 + len(p["rows"]) + 1 + len(p["highlights"]) + 1
+    line_h = max(20.0, min(LINE_H, (strip_y - 18 - (BAR_H + PAD + 26)) / lines))
+
     body = []
     y = BAR_H + PAD + 6
 
     user_host = f"{p['user']}@{p['host']}"
-    body.append(f'<text {anim("k", "big")} x="{PAD}" y="{y}">{esc(user_host)}</text>')
+    body.append(f'<text {anim("k", "big")} x="{PAD}" y="{y:.1f}">{esc(user_host)}</text>')
     y += 20
     body.append(
-        f'<text {anim("dim")} x="{PAD}" y="{y}">{"-" * len(user_host)}</text>'
+        f'<text {anim("dim")} x="{PAD}" y="{y:.1f}">{"-" * len(user_host)}</text>'
     )
 
-    y += LINE_H + 4
+    y += line_h + 4
     key_w = max(len(r["key"]) for r in p["rows"]) + 2
     for row in p["rows"]:
         body.append(
-            f'<text {anim()} x="{PAD}" y="{y}" xml:space="preserve">'
+            f'<text {anim()} x="{PAD}" y="{y:.1f}" xml:space="preserve">'
             f'<tspan class="k">{esc(row["key"].ljust(key_w))}</tspan>'
             f'<tspan class="v">{esc(row["value"])}</tspan></text>'
         )
-        y += LINE_H
+        y += line_h
 
     y += 10
-    body.append(f'<text {anim("acc")} x="{PAD}" y="{y}">Highlights</text>')
-    y += LINE_H - 4
+    body.append(f'<text {anim("acc")} x="{PAD}" y="{y:.1f}">Highlights</text>')
+    y += line_h - 4
     for item in p["highlights"]:
         body.append(
-            f'<text {anim()} x="{PAD}" y="{y}" xml:space="preserve">'
+            f'<text {anim()} x="{PAD}" y="{y:.1f}" xml:space="preserve">'
             f'<tspan class="k">  * </tspan>'
             f'<tspan class="v">{esc(item)}</tspan></text>'
         )
-        y += LINE_H - 2
+        y += line_h - 2
 
     y += 6
     body.append(
-        f'<text {anim("dim")} x="{PAD}" y="{y}">{esc(p["tagline"])}</text>'
+        f'<text {anim("dim")} x="{PAD}" y="{y:.1f}">{esc(p["tagline"])}</text>'
     )
 
     # neofetch color strip, bottom-left
-    strip_y = H - PAD - 16
     sw = 26
     for i, color in enumerate(STRIP):
         body.append(
